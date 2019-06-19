@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+/* =====================
+  contact
+===================== */
+
+.info-wrapper {
+  margin-bottom: 30px;
+  h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 0;
+    letter-spacing: 0.02em
+  }
+  p {
+    margin-top: 5px;
+    color: #6c757d;
+
+  }
+}
+
+.mbri-mobile2,
+.mbri-letter,
+.mbri-pin
+{
+  color: $color-icon;
+  font-size: 3rem;
+}
+
+
+/* form
+------------------------- */
+
+form {
+  margin-top: 70px;
+  @include mq('tab'){
+    max-width: 690px;
+    margin: 0 auto;
+  }
+  @include mq('pc'){
+    max-width: 1170px;
+  }
+  
+  .form-control {
+    margin-top: 20px;
+    padding: 10px;
+    @include mq('tab'){
+      padding: 15px 10px 30px;
+    }
+    }
+  
+    textarea {
+      height: 6em !important;
+      }
+    }
+    input::placeholder,
+    textarea::placeholder {
+      font-size: .9rem;
+    }
+    .btn-wrapper {
+      text-align: right;
+    }
+    .btn-custom {
+      font-size: .8rem;
+      background-color: $color-icon;
+      color: #f3f3f3;
+      transition: all 0.5s;
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+
+      &:hover {
+        color: #fff;
+        background: #d8576f;
+      }
+    }
+
+
+/* =====================
+  responsive (Mobile first)
+===================== */
+@media (max-width: 639px) {
+  /*スマホ用のcssを記述*/
+}
+
+@media (min-width: 640px) {
+  /*tablet用のcssを記述*/
+}
+
+@media (min-width: 1024px) {
+  /*pc用のcssを記述*/
+  .contact-info {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .info-wrapper {
+    width: 30%;
+  }
+
+
+
+  .name-mail {
+    display: flex;
+    justify-content: space-between;
+    div {
+      width: 49%;
+    }
+  }
+}
+

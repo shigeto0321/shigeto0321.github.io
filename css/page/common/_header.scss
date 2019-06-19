@@ -1,0 +1,266 @@
+@charset "utf-8";
+
+/* =====================
+  header
+===================== */
+
+.banner {
+  height: 100vh;
+  width: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  // z-index: -1;
+}
+
+.banner:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent linear-gradient(to right bottom, #3f51b5, #ff4081);
+  z-index: -1;
+  opacity: .6;
+}
+
+
+/* header
+------------------------- */
+.header-container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  @include mq('pc'){
+    display: flex;
+    justify-content: space-between
+  }
+}
+
+header {
+  padding: 25px 16px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 1.4rem;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+
+    @include mq('tab') {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-left: 20px;
+    }
+
+    @include mq('pc'){
+      display: flex;
+      align-items: center;
+    }
+
+    a {
+      color: #fff;
+      @include mq('pc'){
+        
+      }
+
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+/* nav
+------------------------- */
+nav {
+
+  @include mq('tab'){
+    margin-left: 20px;
+  }
+}
+
+.open {
+  @include mq('pc'){
+    display: none;
+  }
+}
+
+.close {
+  display: none;
+}
+
+// hamburger button
+.main-nav {
+  display: none;
+  @include mq('pc'){
+    display: flex;
+  }
+
+  li {
+    margin-top: 15px;
+    margin-left: 8px;
+    @include mq('pc'){
+      margin-right: 20px;
+    }
+
+    a {
+      color: #fff;
+      letter-spacing: 0.08em;
+      font-size: .9rem;
+      &:hover {
+        text-decoration: none;
+        color: $color-icon !important;
+      }
+    }
+  }
+}
+
+.material-icons {
+  color: #fff;
+  font-size: 30px;
+  margin-right: 10px;
+  
+  @include mq('tab') {
+    font-size: 40px;
+    margin-right: 20px;
+  }
+}
+
+
+/* nav (jQuery-open)
+------------------------- */
+// addClassで<header>にj-headerをつける
+
+.j-header-open {
+    animation: whHeader 1s linear 0s 1 normal forwards running;
+    box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.1);
+
+    }
+
+.j-header-close {
+    animation: perHeader 1s linear 0s 1 normal forwards running;
+  box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.1);
+
+}
+@keyframes perHeader {
+  0% {
+    background: white;
+    color: #000;
+  }
+  100% {
+    color: #fff;
+  }
+}
+@keyframes whHeader {
+  100% {
+    background: white;
+    color: #000;
+  }
+}
+
+.j-header-shadow {
+  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* nav (jQuery-about)
+------------------------- */
+
+
+
+/* landing
+------------------------- */
+
+.landing {
+  padding-top: 100px;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 85%;
+
+  h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    @include mq('tab'){
+      font-size: 2rem;
+    }
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    @include mq('tab'){
+      font-size: 3.4rem;
+    }
+  }
+
+  p {
+    font-size: 0.9rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .scroll-bottom {
+    margin-top: 30px;
+    @include mq('tab'){
+      margin-top: 70px;
+    }
+
+    i {
+      width: 60px;
+      height: 60px;
+      font-size: 60px;
+      color: #fff;
+      border: solid 2px #fff;
+      border-radius: 50%;
+      line-height: 60px;
+      cursor: pointer;
+    }
+  }
+}
+
+.fuwafuwa {
+  -webkit-animation: fuwafuwa 1s infinite linear alternate;
+  animation: fuwafuwa 1s infinite linear alternate;
+}
+
+@-webkit-keyframes fuwafuwa {
+  0% {
+    -webkit-transform: translateY(0px);
+  }
+
+  100% {
+    -webkit-transform: translateY(10px);
+  }
+}
+
+@keyframes fuwafuwa {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}

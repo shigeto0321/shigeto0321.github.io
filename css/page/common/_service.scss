@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+/* =====================
+  service
+===================== */
+.mbri-code::before {
+  content: "\e91c";
+}
+.service-box-wrapper {
+  @include mq('pc'){
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.service-box {
+  border: solid 1px #e8e8e8;
+  border-radius: .3rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  @include mq('pc'){
+    width: 30%;
+  }
+
+  i {
+    color: #e65f78;
+    font-size: 110px;
+    margin-right: -5px;
+  }
+  h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0 2rem;
+  }
+  p {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+}
+
+
+/* #home
+------------------------- */
+// #home {
+//   background-image: url(../img/menu-bg.jpg);
+//   min-height: 100vh;
+// }
+
+
+
+/* #contact
+------------------------- */
+
+/* =====================
+  responsive (Mobile first)
+===================== */
+@media (max-width: 639px) {
+  /*スマホ用のcssを記述*/
+}
+
+@media (min-width: 640px) {
+  /*tablet用のcssを記述*/
+}
+
+@media (min-width: 1024px) {
+
+  /*pc用のcssを記述*/
+
+
+}

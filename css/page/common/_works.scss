@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+/* =====================
+  header
+===================== */
+
+
+.work-card {
+  margin-bottom: 4rem;
+  text-align-last: left;
+  h4 {
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 5px;
+@include mq('tab'){
+  font-size: 1.5rem;
+}
+@include mq('pc'){
+  margin-bottom: 10px;
+}
+  }
+  p {
+    font-size: 12.5px;
+    @include mq('tab'){
+      font-size: 0.9rem;
+    }
+  }
+}
+
+
+/* #home
+------------------------- */
+// #home {
+//   background-image: url(../img/menu-bg.jpg);
+//   min-height: 100vh;
+// }
+
+
+
+/* #contact
+------------------------- */
+
+/* =====================
+  responsive (Mobile first)
+===================== */
+@media (max-width: 639px) {
+  /*スマホ用のcssを記述*/
+}
+
+@media (min-width: 640px) {
+  /*tablet用のcssを記述*/
+}
+
+@media (min-width: 1024px) {
+
+  /*pc用のcssを記述*/
+  .works-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .work-card {
+    width: 30%;
+  }
+
+}
+
